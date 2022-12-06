@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* custom base styles */
+@layer base {
+  html {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  img {
+    @apply max-w-full max-h-full object-cover;
+  }
+}
+
+/* custom components className */
+@layer components {
+  .wrapper {
+    @apply container mx-auto;
+  }
+
+  .section-gap {
+    @apply px-2 sm:px-4;
+  }
+}
