@@ -18,10 +18,6 @@
 /* custom components className */
 @layer components {
   .wrapper {
-    @apply container mx-auto;
-  }
-
-  .section-gap {
-    @apply px-2 sm:px-4;
+    @apply container mx-auto px-2 sm:px-4;
   }
 }
