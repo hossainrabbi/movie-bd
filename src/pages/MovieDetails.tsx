@@ -89,7 +89,7 @@ export default function MovieDetails() {
                 <div className="my-5 flex gap-2 flex-wrap">
                   <p className="bg-white rounded text-neutral-900 inline-block px-2 py-1">
                     {movie.categories.map((category, i) => (
-                      <Link to="/" key={category}>
+                      <Link className="capitalize" to="/" key={category}>
                         {category}
                         {i === movie.categories.length - 1 ? '' : ', '}
                       </Link>
@@ -97,7 +97,7 @@ export default function MovieDetails() {
                   </p>
                   <p className="bg-white rounded text-neutral-900 inline-block px-2 py-1">
                     {movie.language.map((item, i) => (
-                      <Link to="/" key={item}>
+                      <Link className="capitalize" to="/" key={item}>
                         {item}
                         {i === movie.language.length - 1 ? '' : ', '}
                       </Link>

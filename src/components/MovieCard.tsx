@@ -59,10 +59,10 @@ export default function MovieCard({
         <h3 className="text-xl text-gray-900">{title}</h3>
         <p className="text-sm text-gray-600 mt-2">
           {language.slice(0, 3).map((item, i) => (
-            <React.Fragment key={item}>
+            <span className="capitalize" key={item}>
               {item}
               {i === language.slice(0, 3).length - 1 ? '' : ', '}
-            </React.Fragment>
+            </span>
           ))}
           {language.length > 3 && '...'}
         </p>
