@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function TopNav() {
   return (
-    <Navbar className="shadow-sm py-4 bg-[#333545]">
+    <Navbar className="shadow-sm py-3 bg-[#333545]">
       <div className="flex items-center gap-5">
         <Link to="/">
           <img className="h-9" src="assets/images/logo.svg" alt="" />
