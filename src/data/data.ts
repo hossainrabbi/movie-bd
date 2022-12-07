@@ -135,4 +135,42 @@ export const movies = [
     about:
       "An elite team of mercenaries breaks into a family compound on Christmas Eve, taking everyone hostage. However, they aren't prepared for a surprise combatant: Santa Claus and he's about to show why this Nick is no saint.",
   },
+  {
+    id: 7,
+    title: 'Vijayanand',
+    image: '/assets/images/movie-image/vijayanand-et00324908-1670321954.jpg',
+    banner:
+      '/assets/images/movie-image/banner/vijayanand-et00324908-1670321954.jpg',
+    language: ['Kannada', 'Malayalam', 'Tamil', 'Telugu', 'Hindi'],
+    categories: ['2D'],
+    tags: ['Biography', 'Drama'],
+    area: 'U',
+    time: '2h 39m',
+    release: '9 Dec, 2022',
+    released: false,
+    ratting: '',
+    votes: '',
+    likes: '153.7K',
+    about:
+      'Vijayanand is a biopic on the life of Padma Shri awardee Dr. Vijay Sankeshwar, the owner of the largest fleet of commercial vehicles in the country.',
+  },
+  {
+    id: 8,
+    title: 'Devotion',
+    image: '/assets/images/movie-image/devotion-et00343379-1669028122.jpg',
+    banner:
+      '/assets/images/movie-image/banner/devotion-et00343379-1669028122.jpg',
+    language: ['English'],
+    categories: ['2D'],
+    tags: ['Action', 'Drama', 'Historical', 'War'],
+    area: 'U',
+    time: '2h 21m',
+    release: '2 Dec, 2022',
+    released: true,
+    ratting: '7/10',
+    votes: '168',
+    likes: '',
+    about:
+      'An aerial war epic based on the bestselling book of the same name, tells the harrowing true story of two elite US Navy fighter pilots during the Korean War. Their heroic sacrifices would ultimately make them the Navy`s most celebrated wingmen.',
+  },
 ];
