@@ -1,3 +1,7 @@
+// navbar items
+export const navTag = ['movies', 'stream', 'events', 'plays'];
+export const navOffer = ['listYourShow', 'corporates', 'offers', 'giftCards'];
+
 // carousel data
 export const carousels = [
   {

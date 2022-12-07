@@ -1,5 +1,6 @@
 import { Navbar } from 'flowbite-react';
 import { Link } from 'react-router-dom';
+import { navOffer, navTag } from '../../data/data';
 
 export default function NavbarNav() {
   return (
@@ -8,14 +9,14 @@ export default function NavbarNav() {
       <Navbar.Collapse className="md:!w-full">
         <div className="flex  flex-col md:flex-row justify-between items-center flex-wrap gap-5 w-full">
           <div className="flex flex-col md:flex-row items-center gap-5">
-            {nav1.map((item) => (
+            {navTag.map((item) => (
               <Link className="capitalize" to={`/${item}`} key={item}>
                 {item}
               </Link>
             ))}
           </div>
           <div className="flex flex-col md:flex-row items-center gap-5">
-            {nav2.map((item) => (
+            {navOffer.map((item) => (
               <Link className="capitalize" to={`/${item}`} key={item}>
                 {item}
               </Link>
@@ -26,7 +27,3 @@ export default function NavbarNav() {
     </Navbar>
   );
 }
-
-// navbar items
-const nav1 = ['movies', 'stream', 'events', 'plays'];
-const nav2 = ['listYourShow', 'corporates', 'offers', 'giftCards'];

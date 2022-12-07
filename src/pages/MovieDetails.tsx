@@ -14,7 +14,7 @@ export default function MovieDetails() {
     }
 
     return (
-      <section>
+      <section className="mb-10">
         {/* section header area */}
         <div
           className="min-h-[500px] bg-cover bg-center bg-no-repeat bg-blend-overlay"
