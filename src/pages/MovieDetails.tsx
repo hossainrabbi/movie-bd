@@ -15,6 +15,7 @@ export default function MovieDetails() {
 
     return (
       <section>
+        {/* section header area */}
         <div
           className="min-h-[500px] bg-cover bg-center bg-no-repeat bg-blend-overlay"
           style={{
@@ -32,6 +33,8 @@ export default function MovieDetails() {
             <div className="col-span-2 text-white grid items-center">
               <div>
                 <h2 className="text-4xl font-bold">{movie.title}</h2>
+
+                {/* movie ratings and movie likes */}
                 <div className="mt-7 mb-4">
                   {movie.ratting || movie.votes ? (
                     <span className="flex items-center gap-2">
@@ -51,6 +54,8 @@ export default function MovieDetails() {
                     </span>
                   )}
                 </div>
+
+                {/* movie reviews and movie release data */}
                 <div>
                   {movie.ratting || movie.votes ? (
                     <div className="flex items-center justify-between gap-7 bg-neutral-800 px-6 py-2.5 rounded-lg mr-8">
@@ -78,6 +83,8 @@ export default function MovieDetails() {
                     </div>
                   )}
                 </div>
+
+                {/* movie categories and movie languages */}
                 <div className="my-5 flex gap-2 flex-wrap">
                   <p className="bg-white rounded text-neutral-900 inline-block px-2 py-1">
                     {movie.categories.map((category, i) => (
@@ -96,9 +103,41 @@ export default function MovieDetails() {
                     ))}
                   </p>
                 </div>
+
+                {/* others option in movie */}
+                <div className="mb-5">
+                  <span>{movie.time} . </span>
+                  {movie.tags.map((tag, i) => (
+                    <Link
+                      to="/"
+                      key={tag}
+                      className="hover:underline capitalize"
+                    >
+                      {tag}
+                      {i === movie.tags.length - 1 ? '' : ', '}
+                    </Link>
+                  ))}
+                  <span className="uppercase"> . {movie.area}</span>
+                  {(movie.ratting || movie.votes) && (
+                    <span> . {movie.release}</span>
+                  )}
+                </div>
+
+                {/* tickets booking button */}
+                <button className="btn font-medium text-lg">
+                  Book tickets
+                </button>
               </div>
             </div>
           </div>
+        </div>
+
+        {/* section body area */}
+        <div className="wrapper mt-10">
+          <h3 className="text-3xl font-medium text-gray-900">
+            About the movie
+          </h3>
+          <p className="mt-2 text-gray-600">{movie.about}</p>
         </div>
       </section>
     );
