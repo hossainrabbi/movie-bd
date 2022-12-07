@@ -22,15 +22,15 @@ export default function MovieDetails() {
             backgroundImage: `url(${movie.banner}), linear-gradient(90deg, #1A1A1A,#1A1A1A, #00000068, #000000c0)`,
           }}
         >
-          <div className="wrapper grid grid-cols-4 gap-7">
-            <div className="col-span-1 py-10">
+          <div className="wrapper grid md:grid-cols-3 xl:grid-cols-4 gap-7">
+            <div className="md:col-span-1 py-10">
               <img
                 className="h-full rounded-3xl"
                 src={movie.image}
                 alt={movie.title}
               />
             </div>
-            <div className="col-span-2 text-white grid items-center">
+            <div className="md:col-span-2 text-white grid items-center mb-5 md:0">
               <div>
                 <h2 className="text-4xl font-bold">{movie.title}</h2>
 
@@ -58,7 +58,7 @@ export default function MovieDetails() {
                 {/* movie reviews and movie release data */}
                 <div>
                   {movie.ratting || movie.votes ? (
-                    <div className="flex items-center justify-between gap-7 bg-neutral-800 px-6 py-2.5 rounded-lg mr-8">
+                    <div className="flex items-center justify-between gap-3 lg:gap-7 bg-neutral-800 px-6 py-2.5 rounded-lg lg:mr-8">
                       <div>
                         <h4 className="text-2xl font-medium">
                           Add your rating & review
