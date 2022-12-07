@@ -7,10 +7,9 @@ import {
 export default function Error() {
   const navigate = useNavigate();
   let error = useRouteError();
-  console.log(error);
 
   return (
-    <div className="wrapper w-screen min-h-screen flex justify-center items-center text-center">
+    <div className="wrapper w-full h-full flex justify-center items-center text-center p-5">
       <div>
         <h2 className="text-3xl font-medium text-gray-900">
           Error is Occurred!

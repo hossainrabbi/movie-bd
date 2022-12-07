@@ -2,6 +2,7 @@ import { AiFillLike } from 'react-icons/ai';
 import { FaStar } from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
 import { movies } from '../data/data';
+import Error from './Error';
 
 export default function MovieDetails() {
   const { movieId } = useParams();
@@ -10,7 +11,7 @@ export default function MovieDetails() {
     const movie = movies.find((item) => item.id === parseInt(movieId));
 
     if (!movie) {
-      return <div>Page not found!</div>;
+      return <Error />;
     }
 
     return (
@@ -143,5 +144,5 @@ export default function MovieDetails() {
     );
   }
 
-  return <div>Page not found!</div>;
+  return <Error />;
 }

@@ -4,7 +4,7 @@ import { navOffer, navTag } from '../../data/data';
 
 export default function NavbarNav() {
   return (
-    <Navbar className="bg-[#222539] text-white  ">
+    <Navbar className="bg-slate-900 text-white  ">
       <Navbar.Toggle />
       <Navbar.Collapse className="md:!w-full">
         <div className="flex  flex-col md:flex-row justify-between items-center flex-wrap gap-5 w-full">
