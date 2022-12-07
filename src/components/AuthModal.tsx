@@ -22,9 +22,23 @@ export default function AuthModal({ openModal, handleClose }: AuthModalType) {
       <Modal.Header />
       <Modal.Body>
         {isLogin ? (
-          <LoginForm showLoginForm={showLoginForm} />
+          <LoginForm modal>
+            <span
+              className="text-primary cursor-pointer select-none hover:underline"
+              onClick={() => showLoginForm(false)}
+            >
+              Create account
+            </span>
+          </LoginForm>
         ) : (
-          <RegisterForm showLoginForm={showLoginForm} />
+          <RegisterForm>
+            <span
+              className="text-primary cursor-pointer select-none hover:underline"
+              onClick={() => showLoginForm(true)}
+            >
+              Login account
+            </span>
+          </RegisterForm>
         )}
       </Modal.Body>
     </Modal>

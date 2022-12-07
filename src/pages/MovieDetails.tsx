@@ -37,7 +37,7 @@ export default function MovieDetails() {
 
                 {/* movie ratings and movie likes */}
                 <div className="mt-7 mb-4">
-                  {movie.ratting || movie.votes ? (
+                  {movie.released ? (
                     <span className="flex items-center gap-2">
                       <span className="flex items-center gap-2 text-3xl font-bold">
                         <FaStar className="text-red-500 mb-[1px]" />{' '}
@@ -58,7 +58,7 @@ export default function MovieDetails() {
 
                 {/* movie reviews and movie release data */}
                 <div>
-                  {movie.ratting || movie.votes ? (
+                  {movie.released ? (
                     <div className="flex items-center justify-between gap-3 lg:gap-7 bg-neutral-800 px-6 py-2.5 rounded-lg lg:mr-8">
                       <div>
                         <h4 className="text-2xl font-medium">
@@ -119,9 +119,7 @@ export default function MovieDetails() {
                     </Link>
                   ))}
                   <span className="uppercase"> . {movie.area}</span>
-                  {(movie.ratting || movie.votes) && (
-                    <span> . {movie.release}</span>
-                  )}
+                  {movie.released && <span> . {movie.release}</span>}
                 </div>
 
                 {/* tickets booking button */}

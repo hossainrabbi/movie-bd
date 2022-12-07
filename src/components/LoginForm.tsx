@@ -1,15 +1,21 @@
 import { Checkbox, Label, TextInput } from 'flowbite-react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 // login form props types
 type LoginFormProps = {
-  showLoginForm: (is: boolean) => void;
+  children: React.ReactNode;
+  modal?: boolean;
 };
 
-export default function LoginForm({ showLoginForm }: LoginFormProps) {
+export default function LoginForm({ children, modal = false }: LoginFormProps) {
   return (
-    <form className="space-y-6 px-6 pb-4 sm:pb-6 lg:px-8 xl:pb-8">
-      <h3 className="text-xl text-center font-medium text-gray-900 dark:text-white">
+    <form className="space-y-6 max-w-3xl mx-auto px-6 pb-4 sm:pb-6 lg:px-8 xl:pb-8">
+      <h3
+        className={`${
+          modal ? 'text-xl' : 'text-2xl mt-5'
+        } text-center font-medium text-gray-900`}
+      >
         Login your Account
       </h3>
       <div>
@@ -47,13 +53,7 @@ export default function LoginForm({ showLoginForm }: LoginFormProps) {
         </button>
       </div>
       <div className="text-sm font-medium text-gray-500">
-        Not registered?{' '}
-        <span
-          className="text-primary cursor-pointer select-none hover:underline"
-          onClick={() => showLoginForm(false)}
-        >
-          Create account
-        </span>
+        Not registered? {children}
       </div>
     </form>
   );

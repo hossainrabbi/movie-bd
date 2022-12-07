@@ -9,6 +9,7 @@ type MovieCardProps = {
   title: string;
   language: string[];
   id: number;
+  released: boolean;
   ratting: string;
   votes: string;
   likes?: string;
@@ -19,6 +20,7 @@ export default function MovieCard({
   image,
   title,
   language,
+  released,
   ratting,
   votes,
   likes = '0',
@@ -38,7 +40,7 @@ export default function MovieCard({
       <div className="relative h-80">
         <img className="w-full h-full rounded-t" src={image} alt={title} />
         <div className="absolute bottom-0 w-full py-1 px-2 bg-black text-white">
-          {ratting || votes ? (
+          {released ? (
             <span className="flex items-center gap-2">
               <span className="flex items-center gap-2">
                 <FaStar className="text-red-500 mb-[1px]" /> {ratting}

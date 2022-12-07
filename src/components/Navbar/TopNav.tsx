@@ -19,7 +19,7 @@ export default function TopNav() {
   };
 
   return (
-    <Navbar className="shadow-sm py-3 bg-slate-800">
+    <Navbar className="shadow-sm py-3 !bg-slate-800">
       <div className="flex items-center gap-5">
         <Link to="/">
           <img className="h-9 text-white" src={logo} alt="BookMyShow" />

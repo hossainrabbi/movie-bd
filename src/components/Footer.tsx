@@ -11,7 +11,7 @@ import { navOffer, navTag } from '../data/data';
 
 export default function Footer() {
   return (
-    <FwbFooter className="!rounded-none bg-slate-800">
+    <FwbFooter className="!rounded-none !bg-slate-800">
       <div className="w-full">
         <div className="grid w-full grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
           {/* movie tags nav */}
@@ -55,7 +55,7 @@ export default function Footer() {
             </FwbFooter.LinkGroup>
           </div>
         </div>
-        <div className="w-full bg-slate-900 py-6 px-4 sm:flex sm:items-center sm:justify-between">
+        <div className="w-full !bg-slate-900 py-6 px-4 sm:flex sm:items-center sm:justify-between">
           <FwbFooter.Copyright
             href="#"
             by="BookMyShow™"
