@@ -1,3 +1,19 @@
+// carousel data
+export const carousels = [
+  {
+    id: 1,
+    image: '/assets/images/carousel/carousel-1.jpg',
+  },
+  {
+    id: 2,
+    image: '/assets/images/carousel/carousel-2.jpg',
+  },
+  {
+    id: 3,
+    image: '/assets/images/carousel/carousel-3.jpg',
+  },
+];
+
 // movies data
 export const movies = [
   {

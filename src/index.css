@@ -25,3 +25,10 @@
     @apply px-10 py-3 bg-primary text-white rounded-lg;
   }
 }
+
+/* custom utilities class  */
+@layer utilities {
+  .carousel__style .snap-mandatory {
+    @apply rounded-none;
+  }
+}
