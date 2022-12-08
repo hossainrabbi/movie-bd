@@ -19,7 +19,11 @@ export default function Footer() {
             <FwbFooter.Title title="Movie Tags" />
             <FwbFooter.LinkGroup col={true}>
               {navTag.map((nav) => (
-                <Link className="capitalize hover:underline" to={`/${nav}`}>
+                <Link
+                  className="capitalize hover:underline"
+                  to={`/${nav}`}
+                  key={nav}
+                >
                   {nav}
                 </Link>
               ))}
@@ -31,7 +35,11 @@ export default function Footer() {
             <FwbFooter.Title title="Offers" />
             <FwbFooter.LinkGroup col={true}>
               {navOffer.map((nav) => (
-                <Link className="capitalize hover:underline" to={`/${nav}`}>
+                <Link
+                  className="capitalize hover:underline"
+                  to={`/${nav}`}
+                  key={nav}
+                >
                   {nav}
                 </Link>
               ))}
