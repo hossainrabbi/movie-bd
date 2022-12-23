@@ -1,70 +1,49 @@
-import React from 'react';
-import { AiFillLike } from 'react-icons/ai';
 import { FaStar } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-
-// movie props for card
-type MovieCardProps = {
-  image: string;
-  title: string;
-  language: string[];
-  id: number;
-  released: boolean;
-  ratting: string;
-  votes: string;
-  likes?: string;
-  style?: React.CSSProperties;
-};
+import { MovieType } from '../types/movieType';
 
 export default function MovieCard({
-  image,
-  title,
-  language,
-  released,
-  ratting,
-  votes,
-  likes = '0',
+  backdrop_path,
   id,
-  style,
+  original_language,
+  title,
+  vote_average,
+  vote_count,
   ...rest
-}: MovieCardProps) {
+}: MovieType) {
   const navigate = useNavigate();
 
   return (
     <article
       className="shadow-sm transition-shadow rounded bg-white cursor-pointer hover:shadow"
       onClick={() => navigate(`/movies/${id}`)}
-      style={style}
       {...rest}
     >
       <div className="relative h-80">
-        <img className="w-full h-full rounded-t" src={image} alt={title} />
+        <img
+          className="w-full h-full rounded-t"
+          src={
+            backdrop_path
+              ? `${process.env.REACT_APP_MOVIE_IMAGE_PATH}/${backdrop_path}`
+              : 'https://via.placeholder.com/350x500'
+          }
+          alt={title}
+        />
         <div className="absolute bottom-0 w-full py-1 px-2 bg-black text-white">
-          {released ? (
+          <span className="flex items-center gap-2">
             <span className="flex items-center gap-2">
-              <span className="flex items-center gap-2">
-                <FaStar className="text-red-500 mb-[1px]" /> {ratting}
-              </span>
-              <span>{votes} votes</span>
+              <FaStar className="text-red-500 mb-[1px]" /> {vote_average} / 10
             </span>
-          ) : (
-            <span className="flex items-center gap-2">
-              <AiFillLike className="text-green-500 mb-[1px]" /> {likes} likes
-            </span>
-          )}
+            <span>{vote_count} votes</span>
+          </span>
         </div>
       </div>
 
       <div className="p-3">
         <h3 className="text-xl text-gray-900">{title}</h3>
         <p className="text-sm text-gray-600 mt-2">
-          {language.slice(0, 3).map((item, i) => (
-            <span className="capitalize" key={item}>
-              {item}
-              {i === language.slice(0, 3).length - 1 ? '' : ', '}
-            </span>
-          ))}
-          {language.length > 3 && '...'}
+          Original Language:{' '}
+          <span className="capitalize">{original_language}</span>
         </p>
       </div>
     </article>
