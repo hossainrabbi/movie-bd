@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { MovieType } from '../types/movieType';
 import Error from './Error';
 
